@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.7.5" client="site" method="upgrade">
+	<name>Tiles</name>
+	<author>Andrzej Bolewski</author>
+	<creationDate>August 2017</creationDate>
+	<copyright>(C) 2017 www.solmedia.pl.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>biuro@solmedia.pl</authorEmail>
+	<authorUrl>http://www.solmedia.pl/</authorUrl>
+	<version>1.0</version>
+	<description>Tiles for Joomla 3</description>
+	
+	<files>
+		<filename module="mod_tiles">mod_tiles.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_tiles.xml</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+	</files>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="intro" type="editor" label="Tekst wstępu" filter="raw" />
+		</fieldset>
+		<fieldset name="Tiles" label="Kafelki - wpisz dane">
+			<field name="tiles" type="subform"
+				formsource="modules/mod_tiles/repeat_tiles.xml" multiple="true"
+				label="Kafelki" description="Dodawanie kafelków" />
+			
+		</fieldset>
+		
+	</fields>
+	</config>
+</extension>

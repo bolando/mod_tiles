@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>	
+					<field name="title" label="Tytuł" size="3" type="text" />
+					<field name="img" directory="ikonkiProdukty" label="Obrazek/Ikona" description="Wybierz lub wgraj" size="3" type="media" />
+					<field name="description" label="opis" height="200" type="editor" filter="raw" />
+		</form>
