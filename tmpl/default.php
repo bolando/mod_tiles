@@ -28,8 +28,9 @@ foreach ($tiles as $tile) : ?>
 		<div class="image">
 			<?php if ($tile->choose == 'image'):?>
 			<img class="img-responsive" src="<?php echo $tile->img;?>" alt="" />
-			<?php else {echo $tile->icon;}?>
-			<?
+			<?php else: ?>
+				<?php echo $tile->icon; ?>
+			<?php endif;?>
 		</div>
 		<div class="description">
 			<?php echo $tile->description;?>

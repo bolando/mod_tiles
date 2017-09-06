@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>	
 	<field name="title" label="Tytuł" size="3" type="text" />
-	<field name="choose" label="Wybierz opcję" size="3" type="radio" class="btn-group" />
+	<field name="choose" label="Wybierz opcję" size="3" type="radio" class="btn-group" default="image">
 		 <option value="image">użyję obrazka</option>
 		<option value="icon">użyję ikonki, np. Font Awesome</option>
+	</field>
 	<field name="img" directory="ikonkiProdukty" label="Obrazek" description="Wybierz lub wgraj" size="3" type="media" />
-	<field name="icon" label="Ikonka" description="Wpisz kod ikonki"  type="text"  />
+	<field name="icon" label="Ikonka, np. &lt; i class=&quot;fa fa-address-book&quot; aria-hidden=&quot;true&quot;  &gt; &lt; /i &gt;" description="Wpisz kod ikonki"  type="text"  />
 	<field name="description" label="opis" height="200" type="editor" filter="raw" />
 </form>
