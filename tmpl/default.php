@@ -26,7 +26,10 @@ foreach ($tiles as $tile) : ?>
 			<?php echo $tile->title;?>
 		</div>
 		<div class="image">
+			<?php if ($tile->choose == 'image'):?>
 			<img class="img-responsive" src="<?php echo $tile->img;?>" alt="" />
+			<?php else {echo $tile->icon;}?>
+			<?
 		</div>
 		<div class="description">
 			<?php echo $tile->description;?>
@@ -34,21 +37,6 @@ foreach ($tiles as $tile) : ?>
 	</div>
   
 <?php endforeach; 
-/*foreach( $tiles['title'] as $tile  ) {
-	
-	echo '<div class="tile">
-		<div class="title">'
-			.$tiles['title'][$i].'
-		</div>
-		<div class="image">
-			<img class="img-responsive" src="'.$tiles['img'][$i].'" alt="" />
-		</div>
-		<div class="description">
-			'.$tiles['description'][$i].'
-		</div>
-	</div>';
-	$i++;
-}*/
 ?>
 
 	
