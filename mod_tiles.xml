@@ -21,8 +21,8 @@
 	<config>
 	<fields name="params">
 		<fieldset name="basic">
-			<field name="style" type="list" label="Wybierz styl" description="Szczegóły u: solmedia.pl">
-			  <option value="default">Domyślny</option>
+			<field name="style" type="list" default="" label="Wybierz styl" description="Szczegóły u: solmedia.pl">
+			  <option value="default_view">Domyślny</option>
 			  <option value="full">Full</option>
 			</field>
 			<field name="intro" type="editor" label="Tekst wstępu" filter="raw" />
