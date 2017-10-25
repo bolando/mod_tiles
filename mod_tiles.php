@@ -19,8 +19,17 @@ defined('_JEXEC') or die;
 // get the repeatable field value and decode it
 //print_r ($params->get('tiles'));
 $tiles 	 = $params->get('tiles');
+$styl 	 = $params->get('style');
 $doc = JFactory::getDocument();
-$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles.css');
-
-require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'default'));
+switch ($styl) {
+	case 'full':
+		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_full.css');
+        require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'full'));
+        break;
+    
+    default:
+		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_default.css');
+        require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'default'));
+        break;
+}
 ?>
