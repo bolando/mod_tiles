@@ -19,8 +19,9 @@ defined('_JEXEC') or die;
 // get the repeatable field value and decode it
 //print_r ($params->get('tiles'));
 $tiles 	 = $params->get('tiles');
-$styl 	 = $params->get('style');
+$styl 	 = $params->get('styl');
 $doc = JFactory::getDocument();
+$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 switch ($styl) {
 	case 'full':
 		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_full.css');

@@ -21,11 +21,22 @@
 	<config>
 	<fields name="params">
 		<fieldset name="basic">
-			<field name="style" type="list" default="" label="Wybierz styl" description="Szczegóły u: solmedia.pl">
+			<field name="styl" type="list"  label="Wybierz styl" description="Szczegóły u: solmedia.pl">
 			  <option value="default_view">Domyślny</option>
 			  <option value="full">Full</option>
 			</field>
-			<field name="intro" type="editor" label="Tekst wstępu" filter="raw" />
+			<field name="kolor" type="color" default="ddd" label="Wybierz kolor wysuwanego paska" />
+			<field name="kolumny" type="list" default="3" label="Ile kolumn?" >
+				<option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			  <option value="6">6</option>
+			</field>
+			<field name="intro" type="editor" label="Tekst wstępu (opcjonalnie)" filter="raw" />
+			
+			<field 	name="moduleclass_sfx"	type="text" label="suffiks klasy modułu"  />
 		</fieldset>
 		<fieldset name="Tiles" label="Kafelki - wpisz dane">
 			<field name="tiles" type="subform"

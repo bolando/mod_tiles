@@ -7,5 +7,10 @@
 	</field>
 	<field name="img" directory="ikonkiProdukty" label="Obrazek" description="Wybierz lub wgraj" size="3" type="media" />
 	<field name="icon" label="Ikonka, np. &lt; i class=&quot;fa fa-address-book&quot; aria-hidden=&quot;true&quot;  &gt; &lt; /i &gt;" description="Wpisz kod ikonki"  type="text"  />
+	<field name="link" label="Link" type="text"  />
+	<field name="target" label="Link w nowym oknie?" size="3" type="radio" class="btn-group" default="no">
+		 <option value="no">Nie</option>
+		<option value="yes">Tak</option>
+	</field>
 	<field name="description" label="opis" height="200" type="editor" filter="raw" />
 </form>

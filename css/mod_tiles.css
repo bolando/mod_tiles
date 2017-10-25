@@ -1,34 +1,18 @@
+
 #tiles {
 	display:flex;
 	flex-wrap:wrap;
-	justify-content:space-between;
 }
 #tiles .tile {
+	width:24%;
+	background:#f5f5f5;
+	margin:0 1% 1% 0;
 	border-radius:5px;
 	position:relative;
 	overflow:hidden;
 	min-height:195px;
-	text-align:center;
 }
-#tiles.col1 .tile {
-	width:100%;
-	margin: 0 0 1% 0;
-}
-#tiles.col2 .tile {
-	width:49%;
-}
-#tiles.col3 .tile {
-	width:33%;
-}
-#tiles.col4 .tile {
-	width:24%;
-}
-#tiles.col5 .tile {
-	width:19%;
-}
-#tiles.col6 .tile {
-	width:15%;
-}
+
 #tiles .tile .title {
 	padding:10px 0;
 	font-size:16px;
@@ -72,14 +56,4 @@
 	#tiles .tile {
 		width:100%;
 	}
-}
-#tiles a {
-	text-decoration:none
-}
-#tiles .fa {
-	font-size:100px;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
 }

@@ -15,30 +15,36 @@
  
 // no direct access
 defined('_JEXEC') or die;
-echo $params->get('intro');?>
-<br><br>
-<div id="tiles">
+if ($params->get('intro')):?>
+	<?php echo $params->get('intro');?>
+	<br><br>
+<?php endif;?>
 
+<div id="tiles" class="col<?php echo $params->get('kolumny')?>">
 <?php //print_r($tiles);
 foreach ($tiles as $tile) : ?>
 	<div class="tile">
-		<div class="title">
-			<?php echo $tile->title;?>
-		</div>
-		<div class="image">
+		<a href="<?php echo $tile->link;?>" <?php if ($tile->target == 'yes'):?>target="_blank"<?php endif;?> rel="noopener noreferrer">
 			<?php if ($tile->choose == 'image'):?>
 			<img class="img-responsive" src="<?php echo $tile->img;?>" alt="" />
 			<?php else: ?>
 				<?php echo $tile->icon; ?>
 			<?php endif;?>
-		</div>
-		<div class="description">
-			<?php echo $tile->description;?>
-		</div>
+		</a>
+		<a href="<?php echo $tile->link;?>" <?php if ($tile->target == 'yes'):?>target="_blank"<?php endif;?> rel="noopener noreferrer">
+			<div class="description" style="background:<?php echo $params->get('kolor')?>">
+				<?php if ($tile->title):?>
+					<div><?php echo $tile->title;?></div>
+				<?php endif;?>
+				<?php if ($tile->description):?>
+					<div><?php echo $tile->description;?></div>
+				<?php endif;?>
+			</div>
+		</a>
 	</div>
+	
   
-<?php endforeach; 
-?>
+<?php endforeach; ?>
 
 	
 	
