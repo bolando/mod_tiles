@@ -1,4 +1,5 @@
 <?php
+
 // no direct access
 defined('_JEXEC') or die;?>
 <div class="tiles_module">
@@ -37,3 +38,17 @@ defined('_JEXEC') or die;?>
 		
 	</div>
 </div>
+<script>
+	jQuery('#tiles').bxSlider({
+		slideWidth: 280,
+		minSlides: 1,
+		maxSlides: 3,
+		moveSlides: 1,
+		slideMargin: 10,
+		auto:true,
+		pause:3500,
+		hover:true,
+		controls: true
+	  });
+
+</script>

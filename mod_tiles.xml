@@ -22,8 +22,9 @@
 	<fields name="params">
 		<fieldset name="basic">
 			<field name="styl" type="list"  label="Wybierz styl" description="Szczegóły u: solmedia.pl">
-			  <option value="default_view">Domyślny</option>
-			  <option value="full">Full</option>
+			  <option value="default_view">Domyślny - Tytuł na górze</option>
+			  <option value="full">Full - tytuł na pasku od dołu; zdjęcie na 100%</option>
+			  <option value="slider">Slider</option>
 			</field>
 			<field name="kolor" type="color" default="ddd" label="Wybierz kolor wysuwanego paska" />
 			<field name="kolumny" type="list" default="3" label="Ile kolumn?" >

@@ -21,11 +21,18 @@ defined('_JEXEC') or die;
 $tiles 	 = $params->get('tiles');
 $styl 	 = $params->get('styl');
 $doc = JFactory::getDocument();
+$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles.css');
+$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/jquery.bxslider.min.css');
+$doc->addScript(JURI::Root(true).'/modules/mod_tiles/js/jquery.bxslider.min.js');
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 switch ($styl) {
 	case 'full':
 		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_full.css');
         require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'full'));
+        break;
+	case 'slider':
+		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_slider.css');
+        require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'slider'));
         break;
     
     default:
