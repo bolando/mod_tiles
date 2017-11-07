@@ -1,15 +1,15 @@
 
-#tiles .tile .title {
+.tiles_full #tiles .tile .title {
 	padding:10px 0;
 	font-size:16px;
 	text-align:center;
 	font-weight:bold;
 	height:3em;
 }
-#tiles .image {
+.tiles_full #tiles .image {
 	text-align:center;
 }
-#tiles .description {
+.tiles_full #tiles .description {
 	color:#fff;
 	position:absolute;
 	bottom:-101%;
@@ -21,31 +21,31 @@
 	font-size:14px;
 	box-sizing:border-box;
 }
-#tiles .tile:hover .description{
+.tiles_full #tiles .tile:hover .description{
 	bottom:0;
 	display:block;
 }
-#tiles .description li {
+.tiles_full #tiles .description li {
 	color:#fff;
 }
-#tiles img {
+.tiles_full #tiles img {
 	width:100%;
 }
 @media (max-width:767px) {
-	#tiles .tile {
+	.tiles_full #tiles .tile {
 		width:49%;
 	}
 }
 @media (max-width:425px) {
 	
-	#tiles .tile {
+	.tiles_full #tiles .tile {
 		width:100%;
 	}
 }
-#tiles a {
+.tiles_full #tiles a {
 	text-decoration:none
 }
-#tiles .fa {
+.tiles_full #tiles .fa {
 	font-size:100px;
 	display: flex;
     justify-content: center;

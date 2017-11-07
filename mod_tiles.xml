@@ -17,12 +17,14 @@
 		<filename>repeat_tiles.xml</filename>
 		<folder>tmpl</folder>
 		<folder>css</folder>
+		<folder>js</folder>
 	</files>
 	<config>
 	<fields name="params">
 		<fieldset name="basic">
 			<field name="styl" type="list"  label="Wybierz styl" description="Szczegóły u: solmedia.pl">
 			  <option value="default_view">Domyślny - Tytuł na górze</option>
+			  <option value="default_link">Domyślny z linkiem</option>
 			  <option value="full">Full - tytuł na pasku od dołu; zdjęcie na 100%</option>
 			  <option value="slider">Slider</option>
 			</field>

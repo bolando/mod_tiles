@@ -1,7 +1,7 @@
 <?php
 // no direct access
 defined('_JEXEC') or die;?>
-<div class="tiles_module">
+<div class="tiles_module tiles_full">
 	<?php if ($params->get('intro')):?>
 		<?php echo $params->get('intro');?>
 		<br><br>

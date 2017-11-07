@@ -1,16 +1,6 @@
 <?php
 /**
- * Photo text slider
- *
- * @package 	Photo text slider
- * @subpackage 	Photo text slider
- * @version   	3.6
- * @author    	Gopi Ramasamy
- * @copyright 	Copyright (C) 2010 - 2016 www.gopiplus.com, LLC
- * @license   	http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
- *
- * http://www.gopiplus.com/extensions/2012/03/photo-text-slider-joomla-module/
- *
+Controller
  */
 
 // no direct access
@@ -22,16 +12,20 @@ $tiles 	 = $params->get('tiles');
 $styl 	 = $params->get('styl');
 $doc = JFactory::getDocument();
 $doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles.css');
-$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/jquery.bxslider.min.css');
-$doc->addScript(JURI::Root(true).'/modules/mod_tiles/js/jquery.bxslider.min.js');
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 switch ($styl) {
+	case 'default_link':
+		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_default_link.css');
+        require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'default_link'));
+        break;
 	case 'full':
 		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_full.css');
         require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'full'));
         break;
 	case 'slider':
 		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_slider.css');
+		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/jquery.bxslider.min.css');
+		$doc->addScript(JURI::Root(true).'/modules/mod_tiles/js/jquery.bxslider.min.js');
         require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'slider'));
         break;
     
