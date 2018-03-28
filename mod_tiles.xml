@@ -27,6 +27,7 @@
 			  <option value="default_link">Domyślny z linkiem</option>
 			  <option value="full">Full - tytuł na pasku od dołu; zdjęcie na 100%</option>
 			  <option value="slider">Slider</option>
+			  <option value="simple">Simple - obrazek nad tytułem, bez linku</option>
 			</field>
 			<field name="kolor" type="color" default="ddd" label="Wybierz kolor wysuwanego paska" />
 			<field name="kolumny" type="list" default="3" label="Ile kolumn?" >

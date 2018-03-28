@@ -28,6 +28,10 @@ switch ($styl) {
 		$doc->addScript(JURI::Root(true).'/modules/mod_tiles/js/jquery.bxslider.min.js');
         require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'slider'));
         break;
+	case 'simple':
+		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_simple.css');
+        require JModuleHelper::getLayoutPath('mod_tiles', $params->get('layout', 'simple'));
+        break;
     
     default:
 		$doc->addStyleSheet(JURI::Root(true).'/modules/mod_tiles/css/mod_tiles_default.css');
